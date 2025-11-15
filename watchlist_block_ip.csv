@@ -1,0 +1,65 @@
+ip_address,network,asn,category,description
+185.162.235.0/24,185.162.235.0/24,AS60117,Bulletproof Hosting,HostSailor/HostPalace bulletproof hosting network
+185.203.116.0/22,185.203.116.0/22,AS60117,Bulletproof Hosting,HostSailor bulletproof hosting range
+185.129.148.0/22,185.129.148.0/22,AS49349,Bulletproof Hosting,BlazingFast bulletproof hosting
+185.129.140.0/22,185.129.140.0/22,AS49349,Bulletproof Hosting,BlazingFast C2 infrastructure
+185.100.84.0/22,185.100.84.0/22,AS51852,Bulletproof Hosting,FlokiNET privacy/bulletproof hosting
+185.100.86.0/24,185.100.86.0/24,AS51852,Bulletproof Hosting,FlokiNET high-abuse microsegment
+89.248.160.0/20,89.248.160.0/20,AS43350,Bulletproof Hosting,Novogara DMCA-resistant infrastructure
+185.156.172.0/22,185.156.172.0/22,AS29073,Bulletproof Hosting,Quasi Networks high-abuse hosting
+185.59.220.0/22,185.59.220.0/22,AS29073,Bulletproof Hosting,Quasi Networks malware infra
+185.244.212.0/22,185.244.212.0/22,AS9009,Bulletproof Hosting,3NT Solutions C2/botnet infra
+185.10.68.0/22,185.10.68.0/22,AS9009,Bulletproof Hosting,3NT Solutions scanning infra
+
+5.188.0.0/16,5.188.0.0/16,AS48282,Botnet Infrastructure,Mir Telematiki RU botnet infrastructure
+82.202.192.0/18,82.202.192.0/18,AS49505,Botnet Infrastructure,Selectel persistent botnet hosting
+95.213.0.0/18,95.213.0.0/18,AS49505,Botnet Infrastructure,Selectel C2/scanning infra
+185.20.184.0/22,185.20.184.0/22,AS9123,Botnet Infrastructure,TimeWeb/Veesp phishing & C2 network
+185.20.188.0/22,185.20.188.0/22,AS9123,Botnet Infrastructure,TimeWeb/Veesp malware infra
+185.144.100.0/22,185.144.100.0/22,AS21409,Botnet Infrastructure,HostKey RU/NL C2 network
+185.53.88.0/22,185.53.88.0/22,AS21409,Botnet Infrastructure,HostKey stealer/RAT infra
+185.246.208.0/22,185.246.208.0/22,AS39798,Botnet Infrastructure,MivoCloud offshore C2 hosting
+162.251.80.0/20,162.251.80.0/20,AS396998,Botnet Infrastructure,GTHost constant botnet infra
+45.155.205.0/24,45.155.205.0/24,AS9009,Botnet Infrastructure,High-volume botnet scanning subnet
+176.111.173.0/24,176.111.173.0/24,AS29073,Botnet Infrastructure,Quasi Networks fast-flux DNS/C2
+185.225.68.0/22,185.225.68.0/22,AS206349,Botnet Infrastructure,Fast-flux & malware distribution network
+185.50.24.0/22,185.50.24.0/22,AS206349,Botnet Infrastructure,DGA/malware infrastructure
+
+185.11.124.0/22,185.11.124.0/22,AS42926,Abuse VPS,Kamatera high-abuse VPS infrastructure
+185.147.8.0/22,185.147.8.0/22,AS42926,Abuse VPS,Kamatera scanners & botnet infra
+185.156.72.0/22,185.156.72.0/22,AS60068,Abuse VPS,DataPacket abuse-heavy subnet
+103.230.0.0/22,103.230.0.0/22,AS137409,Abuse VPS,Hosteons offshore malware VPS
+185.183.96.0/22,185.183.96.0/22,AS206092,Abuse VPS,Inferno/SpartanHost high-abuse VPS
+104.244.72.0/21,104.244.72.0/21,AS53667,Abuse VPS,BuyVM/FranTech scanning & proxy infra
+
+51.81.0.0/24,51.81.0.0/24,AS16276,High-Risk Micro-Range,OVH microsegment with concentrated abuse
+51.222.0.0/24,51.222.0.0/24,AS16276,High-Risk Micro-Range,OVH abuse hotspot
+141.95.0.0/24,141.95.0.0/24,AS16276,High-Risk Micro-Range,OVH targeted abuse range
+92.222.0.0/24,92.222.0.0/24,AS16276,High-Risk Micro-Range,OVH scanning subnet
+45.63.0.0/24,45.63.0.0/24,AS20473,High-Risk Micro-Range,Vultr abuse subnet
+104.238.220.0/24,104.238.220.0/24,AS20473,High-Risk Micro-Range,Vultr C2 microsegment
+144.202.0.0/24,144.202.0.0/24,AS20473,High-Risk Micro-Range,Vultr RAT loader subnet
+208.64.121.0/24,208.64.121.0/24,AS35415,High-Risk Micro-Range,Webzilla malware infra
+208.64.122.0/24,208.64.122.0/24,AS35415,High-Risk Micro-Range,Webzilla botnet subnet
+
+185.220.101.0/24,185.220.101.0/24,N/A,TOR Exit,TOR exit node cluster
+185.220.102.0/24,185.220.102.0/24,N/A,TOR Exit,TOR exit node cluster
+185.220.103.0/24,185.220.103.0/24,N/A,TOR Exit,TOR exit node cluster
+
+36.0.0.0/10,36.0.0.0/10,AS4808,China Scanning,China Telecom scanning & botnet infra
+202.112.0.0/13,202.112.0.0/13,AS4538,China Scanning,Chinese university networks abused in botnets
+
+91.215.85.0/24,91.215.85.0/24,AS206349,Fast-Flux DNS,Fast-flux botnet DNS
+45.146.164.0/23,45.146.164.0/23,AS206349,Fast-Flux DNS,Fast-flux DNS hosting
+45.93.201.0/24,45.93.201.0/24,AS210083,Fast-Flux DNS,Fast-flux DNS C2 infra
+46.17.96.0/20,46.17.96.0/20,AS49870,Fast-Flux DNS,Fananet botnet DNS hosting
+185.244.25.0/24,185.244.25.0/24,AS206349,Fast-Flux DNS,Fast-flux malware DNS
+185.244.26.0/24,185.244.26.0/24,AS206349,Fast-Flux DNS,Fast-flux malware DNS
+185.234.218.0/23,185.234.218.0/23,AS208722,Rogue DNS,Open resolvers used in DNS amplification
+185.234.219.0/24,185.234.219.0/24,AS208722,Rogue DNS,Abused open DNS resolvers
+198.98.51.0/24,198.98.51.0/24,AS53850,Rogue DNS,Malware fallback DNS resolvers
+194.87.103.0/24,194.87.103.0/24,AS49505,Rogue DNS,Stealer/RAT fallback DNS
+45.248.78.0/24,45.248.78.0/24,AS138915,Rogue DNS,Botnet DNS resolver subnet
+185.163.200.0/22,185.163.200.0/22,AS200019,Rogue DNS,Anonymous DNS operators used for phishing/DGA
+45.155.204.0/24,45.155.204.0/24,AS9009,Open Resolver,Open resolvers used in DNS amplification
+45.227.255.0/24,45.227.255.0/24,AS262316,Open Resolver,Amplification open resolver cluster

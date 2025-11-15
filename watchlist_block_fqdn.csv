@@ -1,0 +1,34 @@
+fqdn,category,description
+doubleclick.net,Tracking,Google tracking & behavioral analytics
+google-analytics.com,Tracking,Web analytics beaconing
+adservice.google.com,Tracking,Google ad-service tracking domain
+ads.yahoo.com,Tracking,Yahoo advertising and tracking
+tracking-protection.cdn.mozilla.net,Tracking,Mozilla tracking service
+malware.example.com,Malware Domain,Example malware domain placeholder
+cybercrime-tracker.net,Malware Domain,Domain used by threat intel to track C2 nodes
+blocklist.greensnow.co,Malware Domain,Spam/malware distribution blocklist endpoint
+sinkhole.talosintelligence.com,Malware Domain,Cisco Talos sinkhole domain
+api.mixpanel.com,Telemetry,Tracking/telemetry endpoint
+api.segment.io,Telemetry,Tracking/telemetry endpoint
+vortex.data.microsoft.com,Telemetry,Microsoft telemetry service
+mobile.pipe.aria.microsoft.com,Telemetry,Microsoft telemetry ingestion
+settings-win.data.microsoft.com,Telemetry,Microsoft telemetry endpoint
+
+duckdns.org,Dynamic DNS,Widely abused dynamic DNS platform
+noip.com,Dynamic DNS,No-IP dynamic DNS provider
+no-ip.org,Dynamic DNS,Dynamic DNS abused in botnets
+ddns.net,Dynamic DNS,DynDNS-style dynamic DNS provider
+hopto.org,Dynamic DNS,DNS used for RAT/C2 hosting
+zapto.org,Dynamic DNS,Dynamic DNS used in loaders
+sytes.net,Dynamic DNS,Dynamic DNS used by malware
+myftp.biz,Dynamic DNS,Dynamic DNS hosting
+serveblog.net,Dynamic DNS,Dynamic DNS frequently used by stealer malware
+servepics.com,Dynamic DNS,Dynamic DNS domain
+changeip.com,Dynamic DNS,Dynamic DNS provider
+freenomdns.com,Dynamic DNS,Freenom DNS highly abused for malicious domains
+freenom-hosting.com,Dynamic DNS,Freenom hosting
+dot.tk,Dynamic DNS,High-abuse ccTLD
+ml,Dynamic DNS,High-abuse ccTLD
+ga,Dynamic DNS,High-abuse ccTLD
+cf,Dynamic DNS,High-abuse ccTLD
+gq,Dynamic DNS,High-abuse ccTLD

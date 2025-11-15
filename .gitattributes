@@ -1,0 +1,6 @@
+# Enforce LF line endings
+* text=auto eol=lf
+
+# CSV files must be treated as text with LF endings
+*.csv text eol=lf
+

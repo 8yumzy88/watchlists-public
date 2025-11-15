@@ -1,0 +1,23 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor junk
+*.swp
+*.swo
+*.bak
+
+# Python artifacts
+__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Local secrets (do not commit)
+.env
+.secrets/
+token.txt
+
