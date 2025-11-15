@@ -45,6 +45,7 @@ ip_address,network,asn,category,description
 185.220.101.0/24,185.220.101.0/24,N/A,TOR Exit,TOR exit node cluster
 185.220.102.0/24,185.220.102.0/24,N/A,TOR Exit,TOR exit node cluster
 185.220.103.0/24,185.220.103.0/24,N/A,TOR Exit,TOR exit node cluster
+185.220.104.0/24,185.220.104.0/24,N/A,TOR Exit,TOR exit node cluster
 
 36.0.0.0/10,36.0.0.0/10,AS4808,China Scanning,China Telecom scanning & botnet infra
 202.112.0.0/13,202.112.0.0/13,AS4538,China Scanning,Chinese university networks abused in botnets
