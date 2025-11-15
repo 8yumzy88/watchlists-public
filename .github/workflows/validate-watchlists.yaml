@@ -1,0 +1,37 @@
+name: Validate Watchlists
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Ensure CSVs exist
+      run: |
+        test -f watchlist_block_ip.csv
+        test -f watchlist_block_fqdn.csv
+
+    - name: Validate CSV header structure
+      run: |
+        # Validate IP list header
+        head -n 1 watchlist_block_ip.csv | grep -E '^ip_address,network,asn,category,description$'
+
+        # Validate FQDN list header
+        head -n 1 watchlist_block_fqdn.csv | grep -E '^fqdn,category,description$'
+
+    - name: Check for blank lines
+      run: |
+        if grep -q '^$' watchlist_block_ip.csv; then exit 1; fi
+        if grep -q '^$' watchlist_block_fqdn.csv; then exit 1; fi
+
+    - name: Validate no Windows CRLF
+      run: |
+        if grep -q $'\r' watchlist_block_ip.csv; then exit 1; fi
+        if grep -q $'\r' watchlist_block_fqdn.csv; then exit 1; fi
