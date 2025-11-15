@@ -6,10 +6,13 @@ These lists are provided for defensive and research purposes only.
 
 ## Files
 
-- **watchlist_block_ip.csv**  
+- **rvt_blocklist_ip.csv** – CIDR/IP indicators  
+- **rvt_blocklist_fqdn.csv** – FQDN indicators
+
+- **rvt_blocklist_ip.csv** 
   CIDR-formatted network indicators (IPv4). Suitable for use with functions such as ipv4_is_in_range().
 
-- **watchlist_block_fqdn.csv**  
+- **rvt_blocklist_fqdn.csv** 
   Domain-based indicators (FQDNs). Suitable for DNS, URL, and HTTP log matching.
 
 ## Format
