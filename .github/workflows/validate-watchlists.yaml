@@ -6,32 +6,87 @@ on:
   pull_request:
     branches: [ "main" ]
 
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout repo
+    - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Ensure CSVs exist
+    - name: Confirm required files exist
       run: |
-        test -f watchlist_block_ip.csv
-        test -f watchlist_block_fqdn.csv
+        test -f rvt_blocklist_ip.csv
+        test -f rvt_blocklist_fqdn.csv
 
-    - name: Validate CSV header structure
+    - name: Validate IP watchlist header
       run: |
-        # Validate IP list header
-        head -n 1 watchlist_block_ip.csv | grep -E '^ip_address,network,asn,category,description$'
+        expected_header="ip_address,network,asn,category,description"
+        actual_header=$(head -n 1 rvt_blocklist_ip.csv)
+        if [ "$actual_header" != "$expected_header" ]; then
+          echo "ERROR: rvt_blocklist_ip.csv header mismatch"
+          echo "Expected: $expected_header"
+          echo "Actual:   $actual_header"
+          exit 1
+        fi
 
-        # Validate FQDN list header
-        head -n 1 watchlist_block_fqdn.csv | grep -E '^fqdn,category,description$'
-
-    - name: Check for blank lines
+    - name: Validate FQDN watchlist header
       run: |
-        if grep -q '^$' watchlist_block_ip.csv; then exit 1; fi
-        if grep -q '^$' watchlist_block_fqdn.csv; then exit 1; fi
+        expected_header="fqdn,category,description"
+        actual_header=$(head -n 1 rvt_blocklist_fqdn.csv)
+        if [ "$actual_header" != "$expected_header" ]; then
+          echo "ERROR: rvt_blocklist_fqdn.csv header mismatch"
+          echo "Expected: $expected_header"
+          echo "Actual:   $actual_header"
+          exit 1
+        fi
 
-    - name: Validate no Windows CRLF
+    - name: Fail if blank lines exist
       run: |
-        if grep -q $'\r' watchlist_block_ip.csv; then exit 1; fi
-        if grep -q $'\r' watchlist_block_fqdn.csv; then exit 1; fi
+        if grep -q '^$' rvt_blocklist_ip.csv; then
+          echo "ERROR: Blank line found in rvt_blocklist_ip.csv"
+          exit 1
+        fi
+        if grep -q '^$' rvt_blocklist_fqdn.csv; then
+          echo "ERROR: Blank line found in rvt_blocklist_fqdn.csv"
+          exit 1
+        fi
+
+    - name: Validate LF line endings only
+      run: |
+        if grep -q $'\r' rvt_blocklist_ip.csv; then
+          echo "ERROR: CRLF found in rvt_blocklist_ip.csv"
+          exit 1
+        fi
+        if grep -q $'\r' rvt_blocklist_fqdn.csv; then
+          echo "ERROR: CRLF found in rvt_blocklist_fqdn.csv"
+          exit 1
+        fi
+
+    - name: Validate no Windows-1252 or BOM encoding
+      run: |
+        if file rvt_blocklist_ip.csv | grep -qi "with BOM"; then
+          echo "ERROR: rvt_blocklist_ip.csv contains BOM"
+          exit 1
+        fi
+        if file rvt_blocklist_fqdn.csv | grep -qi "with BOM"; then
+          echo "ERROR: rvt_blocklist_fqdn.csv contains BOM"
+          exit 1
+        fi
+
+    - name: Validate no obvious misplacements
+      run: |
+        # IP list must not contain FQDNs
+        if grep -Eq '[A-Za-z]' rvt_blocklist_ip.csv | grep -v '^ip_address'; then
+          echo "ERROR: rvt_blocklist_ip.csv contains alphabetic characters outside header"
+          exit 1
+        fi
+        # FQDN list must not contain slashes or spaces
+        if grep -Eq '[ /]' rvt_blocklist_fqdn.csv | grep -v '^fqdn'; then
+          echo "ERROR: rvt_blocklist_fqdn.csv contains invalid characters"
+          exit 1
+        fi
+
